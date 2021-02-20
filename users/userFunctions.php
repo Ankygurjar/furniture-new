@@ -858,6 +858,14 @@ class UserFunctions{
 
     }
 
+    function getProBoxes($id){
+
+        $getProBoxesQuery = "select * from product_boxes where productId = '$id'";
+        $getProBoxes = $this->getConnection()->query($getProBoxesQuery);
+        return $getProBoxes;
+
+    }
+
     function getOrdersFromStore($url, $store){
 
         $curStoreData = $this->getCurStoreData($store);

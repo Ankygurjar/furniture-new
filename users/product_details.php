@@ -19,6 +19,8 @@ if (!empty($_GET)) {
 
     $curProPrice = $UF->productDeatails($_GET['pid'])[0]['productPrice'];
 
+    $boxes = $UF->getProBoxes($_GET['pid']);
+
    if(isset($_POST['onImport'])){
       $UF = new UserFunctions();
       
